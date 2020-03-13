@@ -1577,10 +1577,11 @@ footer {
 
     footer {
         margin-top: 0vw;
-        position: relative;
         font-size: 4vw;
         /* top:130vw; */
         height: 30vw;
+        position: absolute;
+        bottom: 0;
     }
 
 }
