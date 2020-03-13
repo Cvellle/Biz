@@ -771,6 +771,8 @@ nav .dropdown-content a {
 
 footer { 
     position: relative;
+    margin-top: 100vh;
+    bottom: 0;
     top: 5vw;
     display: flex;
     align-items: center;
@@ -778,7 +780,7 @@ footer {
     padding: 0 5vw;
     height:10vw;
     background: rgba(0, 0, 0, 0.904);
-    color: white;
+    color: rgba(255, 255, 255, 0.89);
     width: 100%;
     margin: 0;
     font-size: 1.5vw;
@@ -1569,18 +1571,11 @@ footer {
     .clients .imagesRow:active {
         cursor: grab;
     }
-    
-    #s {
-        width: 500px;
-        height:502px;
-    }
 
     footer {
-        margin-top: 0vw;
         font-size: 4vw;
-        /* top:130vw; */
         height: 30vw;
-        position: absolute;
+        position: relative;
         bottom: 0;
     }
 
