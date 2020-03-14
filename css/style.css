@@ -79,7 +79,7 @@ nav ul a:hover, nav ul a.active, nav .dropdown-link:hover > .fa-chevron-down {
    color: #18d36e;
 }
 
-.wrap +i, .wrap + i + i {
+.wrap + i, .wrap + i + i {
     display: none;
 }
 
@@ -99,6 +99,9 @@ nav .fa-chevron-down {
     padding-left: 0vw;
     align-self: center;
     transition: 0.5s all;
+    align-self: center;
+    position: relative;
+    bottom: 0.08vw;
 }
 
 nav .fa-chevron-up {
@@ -117,10 +120,13 @@ nav ul.dropdown-content {
     transition: .4s;
     transition-delay: .2s;
     opacity: 0;
+    display: none;
 }
 
 nav .dropdown-link:hover ul.dropdown-content {
+    transition: 1s;
     opacity: 1;
+    display: block;
 }
 
 nav .dropdown-content li {
@@ -946,6 +952,7 @@ footer {
     nav .dropdown-link:hover ul.dropdown-content {
         transition: 0s all;
         opacity: 1;
+        display: block;
     }
     
     nav .dropdown-content li {

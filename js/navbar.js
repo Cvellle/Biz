@@ -13,6 +13,7 @@ function resizeNav() {
     nav.classList.remove('scroll');
   }
 }
+window.addEventListener('scroll', resizeNav);
 
 // DROPDOWN
 var media = window.matchMedia("(max-width: 1024px)")
@@ -24,30 +25,31 @@ if (media.matches) {
     if (dropdownArrow.style.display !== "none") {
       dropdownArrow.style.display = "none";
       dropdownArrowUp.style.display = "inline";
+      dropdownContent.style.display = "block";
       dropdownContent.style.height = "auto";
       dropdownContent.style.opacity = "1"
     }
     else {
       dropdownArrow.style.display = "inline";
       dropdownArrowUp.style.display = "none";
+      dropdownContent.style.display = "none";
       dropdownContent.style.height = "0";
       dropdownContent.style.opacity = "0"
     }
   }
 }
-
 // HIDE AND SHOW SIDEBAR
 const hamburger = document.querySelector(".fa-bars");
 const x = document.querySelector(".fa-close");
 const sidebar = document.querySelector("nav ul");
 
-hamburger.onclick = function () {
+hamburger.onclick = function() {
   this.style.display = "none";
   this.nextElementSibling.style.display = "block";
   sidebar.style.transform = "translate(0)";
 }
 
-x.onclick = function () {
+x.onclick = function() {
   this.style.display = "none";
   this.previousElementSibling.style.display = "block ";
   sidebar.style.transform = "translate(-40vw, 0)";
