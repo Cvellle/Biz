@@ -51,42 +51,7 @@ function clientsSlide() {
             let addEl = image[7];
             let rotateAt = window.innerWidth / 3;
 
-            debounce(closureCaller());
-
-
-            // for (let i = 0; i < image.length; ++i) {
-            // var closureCaller = (function () {
-            //     return function () {
-            // if (movedFor > rotateAt) {
-            //     movedRight = true;
-
-                //rekurzija
-                // inner(); 
-            // }
-
-            // if (movedRight) {
-                // let source = image[7].src;
-                // var node1 = document.createElement("IMG");
-                // node1.src =  image[7].src;
-                // dragableEl.prepend(node1);
-
-                // var node2 = document.createElement("IMG");
-                // node2.src = source;
-                // dragableEl.prepend(node2);
-
-                // var node3 = document.createElement("IMG");
-                // node3.src = source;
-                // dragableEl.prepend(node3);
-
-                // console.log(image[s].src);
-                // dragableEl.removeChild(delEl);
-                // s.style.background = "url('./assets/intro-carousel/1.jpg')";
-                // dragableEl.prepend(dragableEl.cloneNode(true));
-            // }
-            // }
-            // })();
-            // debounce(closureCaller());
-            // }
+            debounce(closureCaller());         
         }
 
         function debounce(func, wait = 20, immediate = true) {
@@ -152,6 +117,50 @@ function clientsSlide() {
         
 
     window.addEventListener('scroll', clientsSlide);
+
+
+
+
+
+
+
+
+
+  // for (let i = 0; i < image.length; ++i) {
+            // var closureCaller = (function () {
+            //     return function () {
+            // if (movedFor > rotateAt) {
+            //     movedRight = true;
+
+                //rekurzija
+                // inner(); 
+            // }
+
+            // if (movedRight) {
+                // let source = image[7].src;
+                // var node1 = document.createElement("IMG");
+                // node1.src =  image[7].src;
+                // dragableEl.prepend(node1);
+
+                // var node2 = document.createElement("IMG");
+                // node2.src = source;
+                // dragableEl.prepend(node2);
+
+                // var node3 = document.createElement("IMG");
+                // node3.src = source;
+                // dragableEl.prepend(node3);
+
+                // console.log(image[s].src);
+                // dragableEl.removeChild(delEl);
+                // s.style.background = "url('./assets/intro-carousel/1.jpg')";
+                // dragableEl.prepend(dragableEl.cloneNode(true));
+            // }
+            // }
+            // })();
+            // debounce(closureCaller());
+            // }
+
+
 
 
     // 2 
