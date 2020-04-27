@@ -8,25 +8,16 @@ function clientsSlide() {
     const position = clients.offsetTop * 0.7;
     //condition
     const condition = document.documentElement.scrollTop > position;
-
     if (condition) {
         clients.classList.add("clientsActive")
     }
 
     //SLIDE IMAGES
-
     const dragableEl = document.querySelector("#imagesRow");
     const image = [...document.querySelectorAll("#imagesRow img")];
-    // const image = Array.from(document.querySelectorAll("#imagesRow img"));
-    // const image = Array.apply([], document.querySelectorAll('#imagesRow img'));
-
     dragElement(dragableEl);
 
-    let x1 = 0;
-    let x2 = 0;
-
     function dragElement(element) {
-
         if (document.getElementById(element.id)) {
             document.getElementById(element.id).onmousedown = dragMouseDown;
         } else {
@@ -43,15 +34,8 @@ function clientsSlide() {
             pos1 = pos2 - e.clientX;
             pos2 = e.clientX;
             x2 = e.clientX;
-            let xDifference = x2 - x1;
-            let movedFor = xDifference;
-
             element.style.left = (element.offsetLeft - pos1) + "px";
-            let delEl = image[7];
-            let addEl = image[7];
-            let rotateAt = window.innerWidth / 3;
-
-            debounce(closureCaller());         
+            debounce(closureCaller());
         }
 
         function debounce(func, wait = 20, immediate = true) {
@@ -68,7 +52,6 @@ function clientsSlide() {
                 if (callNow) func.apply(context, args);
             };
         };
-
 
         function closeDragElement(e) {
             movedFor = 0;
@@ -105,165 +88,12 @@ function clientsSlide() {
 
             var node7 = document.createElement("IMG");
             node7.src = image[0].src;
-            node7.style.left = "transformx(-180vw)"
+            node7.style.left = "transformx(-180vw)";
+
             dragableEl.prepend(node7);
-
             dragableEl.style.left = "-100vw !important";
-            
-            }
-
         }
     }
-        
+}
 
-    window.addEventListener('scroll', clientsSlide);
-
-
-
-
-
-
-
-
-
-  // for (let i = 0; i < image.length; ++i) {
-            // var closureCaller = (function () {
-            //     return function () {
-            // if (movedFor > rotateAt) {
-            //     movedRight = true;
-
-                //rekurzija
-                // inner(); 
-            // }
-
-            // if (movedRight) {
-                // let source = image[7].src;
-                // var node1 = document.createElement("IMG");
-                // node1.src =  image[7].src;
-                // dragableEl.prepend(node1);
-
-                // var node2 = document.createElement("IMG");
-                // node2.src = source;
-                // dragableEl.prepend(node2);
-
-                // var node3 = document.createElement("IMG");
-                // node3.src = source;
-                // dragableEl.prepend(node3);
-
-                // console.log(image[s].src);
-                // dragableEl.removeChild(delEl);
-                // s.style.background = "url('./assets/intro-carousel/1.jpg')";
-                // dragableEl.prepend(dragableEl.cloneNode(true));
-            // }
-            // }
-            // })();
-            // debounce(closureCaller());
-            // }
-
-
-
-
-    // 2 
-    // const img = document.querySelectorAll('.imagesRow img');
-    // img.forEach(el => el.addEventListener("mousedown", onDown));
-    // img.forEach(el => el.addEventListener("mouseup", onUp));
-    // img.forEach(el => el.addEventListener("mouseup", onUp));
-    // img.forEach(el => el.addEventListener("mouseLeave", onLeave));
-    // img.forEach(el => el.addEventListener("mousemove", onMove));
-    //     let mouseDown = false;
-    //     let x1 = 0;
-
-    //     function onDown(event) {
-    //         mouseDown = true;
-    //         event.target.style.cursor = "grab";
-    //         x1 = event.clientX;
-    //     }
-
-    //     function onUp (event) {
-    //         mouseDown = false;
-    //         event.target.style.cursor = "default";
-    //     }
-
-    //     function onLeave(event) {
-    //         event.target.style.cursor = "default";
-    //     }
-
-    //     let x2 = 0;
-
-    //     function onMove(event) { 
-    //         x2 = event.clientX;
-    //         console.log(x2)
-    //         let newPostitionLeft = x2-x1;
-    //         const element = event.target.parentElement;
-    //         if (mouseDown) { 
-    //             if (x2 > x1) {
-    //                 element.style.marginLeft = (x2-x1) + "px"; 
-    //             }
-
-    //             if (x1 > x2) { 
-    //                 element.style.marginLeft = `${(newPostitionLeft)}px`;
-    //             }
-    //             let el = element.style.marginLeft;
-    //             if (el.substring(0, el.length - 2) > window.innerWidth/4) { 
-    //                 // event.target.parentElement.parentNode.firstElementChild.style.marginLeft = `${(x2-x1)}px`;
-    //             }
-    //         }
-    //     }
-// }
-
-
-
-
-
-
-
-// function elementDrag(e) {
-//     pos1 = pos2 - e.clientX;
-//     pos2 = e.clientX;
-//     x2 = e.clientX;
-//     let xDifference = x2 - x1;
-//     let movedFor = xDifference;
-
-//     element.style.left = (element.offsetLeft - pos1) + "px";
-//     let delEl = image[7];
-//     let addEl = image[7];
-//     let rotateAt = window.innerWidth / 3;
-
-//     debounce(closureCaller());
-
-
-    // for (let i = 0; i < image.length; ++i) {
-    // var closureCaller = (function () {
-    //     return function () {
-    // if (movedFor > rotateAt) {
-    //     movedRight = true;
-
-        //rekurzija
-        // inner(); 
-    // }
-
-    // if (movedRight) {
-        // let source = image[7].src;
-        // var node1 = document.createElement("IMG");
-        // node1.src =  image[7].src;
-        // dragableEl.prepend(node1);
-
-        // var node2 = document.createElement("IMG");
-        // node2.src = source;
-        // dragableEl.prepend(node2);
-
-        // var node3 = document.createElement("IMG");
-        // node3.src = source;
-        // dragableEl.prepend(node3);
-
-        // console.log(image[s].src);
-        // dragableEl.removeChild(delEl);
-        // s.style.background = "url('./assets/intro-carousel/1.jpg')";
-        // dragableEl.prepend(dragableEl.cloneNode(true));
-    // }
-    // }
-    // })();
-    // debounce(closureCaller());
-    // }
-    // }
-
+window.addEventListener('scroll', clientsSlide);

@@ -43,13 +43,13 @@ const hamburger = document.querySelector(".fa-bars");
 const x = document.querySelector(".fa-close");
 const sidebar = document.querySelector("nav ul");
 
-hamburger.onclick = function() {
+hamburger.onclick = function () {
   this.style.display = "none";
   this.nextElementSibling.style.display = "block";
   sidebar.style.transform = "translate(0)";
 }
 
-x.onclick = function() {
+x.onclick = function () {
   this.style.display = "none";
   this.previousElementSibling.style.display = "block ";
   sidebar.style.transform = "translate(-40vw, 0)";
