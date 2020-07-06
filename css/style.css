@@ -927,10 +927,10 @@ footer {
     nav .dropdown-content a {
         color: rgb(175, 172, 172);
     }
-    #dropdown-arrow {
+    .dropdown-arrow {
         display: inline;
     }
-    #dropdown-arrow2 {
+    .dropdown-arrow2 {
         display: none;
     }
     /* MAIN SCREEN */
