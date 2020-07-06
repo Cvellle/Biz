@@ -774,11 +774,6 @@ nav .dropdown-content a {
     cursor: grab;
 }
 
-#s {
-    width: 500px;
-    height: 502px;
-}
-
 footer {
     position: relative;
     margin-top: 100vh;
